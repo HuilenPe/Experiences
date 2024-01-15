@@ -1,41 +1,57 @@
+/*  Esta regla CSS establece estilos para la raíz del documento, para el elemento html. 
+Los estilos definidos aquí se aplican globalmente a toda la página. */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: 'Poppins', sans-serif; /* Fuente principal y respaldo */
+  line-height: 1.5; /* Altura de línea */
+  font-weight: 400; /* Grosor de la fuente */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --color-primary: #6CBAD9;
+  --color-background: #F2F2F2;
+  --color-accent: #E94749;
+  --color-secondary: #CA93DD;
+  --color-highlight: #7677ED;
+  --color-white: #FFFFFF;
 
+  color: #020817; /* Color de texto principal */
+   background-color: var(--color-background) !important; /* Color de fondo principal */
+  /* Ajustes de la renderización de fuentes y texto para mejorar la legibilidad y la apariencia en diferentes navegadores y sistemas: */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
-}
+} */
 
-body {
-  margin: 0;
+/* body {
+  margin:0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
+} */
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-button {
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -52,9 +68,10 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
-@media (prefers-color-scheme: light) {
+/* estilos adicionales que se aplicarán solo cuando el usuario tenga configurado un esquema de color claro en su sistema operativo: */
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -65,4 +82,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

@@ -6,5 +6,5 @@ import routes from './router/Router'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     {routes}
-  </React.StrictMode>,
+  </React.StrictMode>
 )

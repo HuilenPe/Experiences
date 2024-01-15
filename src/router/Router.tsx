@@ -4,7 +4,7 @@ import HomePage from '@/pages/HomePage'
 const routes = (
   <BrowserRouter>
     <Routes>
-      <Route path='/home' element={<HomePage />} />
+      <Route path='/' element={<HomePage />} />
     </Routes>
   </BrowserRouter>
 )
