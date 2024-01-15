@@ -30,6 +30,11 @@ module.exports = {
     '@typescript-eslint',
     'react',
   ],
+  settings: {
+    react: {
+      version: 'detect', // 'detect' buscará automáticamente la versión de React en el proyecto
+    },
+  },
   rules: {
     // Reglas estrictas de ESLint
     'no-console': 'error', // Prohibir el uso de console.log en el código
@@ -48,7 +53,7 @@ module.exports = {
     // Reglas de estilo (puedes ajustar según tus preferencias)
     'indent': ['error', 2], // Usar 2 espacios de sangría
     'quotes': ['error', 'single'], // Usar comillas simples
-    'semi': [], // Punto y coma al final de cada declaración
-    'comma-spacing': [], // Espacio después de las comas
+    'semi': 0, // Punto y coma al final de cada declaración
+    'comma-spacing': 0, // Espacio después de las comas
   },
 };
