@@ -1,6 +1,6 @@
 //test: si el componete HomePage renderiza un elemento que contiene el texto "hello"
 import { render, screen } from '@testing-library/react'
-import HomePage from '../pages/HomePage'
+import HomePage from '@/pages/HomePage'
 
 //se define el test con una descripción y un callback
 test('renders hello text', () => {
