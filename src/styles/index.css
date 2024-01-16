@@ -1,6 +1,14 @@
 /*  Esta regla CSS establece estilos para la raíz del documento, para el elemento html. 
 Los estilos definidos aquí se aplican globalmente a toda la página. */
 
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@fontsource /poppins/300.css;
+@fontsource /poppins/400.css;
+@fontsource /poppins/600.css;
+@fontsource /poppins/700.css;
+
 /* Reset */
 * {
   margin: 0;
@@ -9,10 +17,6 @@ Los estilos definidos aquí se aplican globalmente a toda la página. */
 }
 
 :root {
-  font-family: 'Poppins', sans-serif; /* Fuente principal y respaldo */
-  line-height: 1.5; /* Altura de línea */
-  font-weight: 400; /* Grosor de la fuente */
-
   --color-primary: #6CBAD9;
   --color-background: #F2F2F2;
   --color-accent: #E94749;
@@ -21,65 +25,70 @@ Los estilos definidos aquí se aplican globalmente a toda la página. */
   --color-white: #FFFFFF;
 
   color: #020817; /* Color de texto principal */
-   background-color: var(--color-background) !important; /* Color de fondo principal */
+  background-color: var(--color-background) !important; /* Color de fondo principal */
   /* Ajustes de la renderización de fuentes y texto para mejorar la legibilidad y la apariencia en diferentes navegadores y sistemas: */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+/* Nuevas variables de Sadcn */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 3.9%;
+  --radius: 0.5rem;
 }
 
-/* a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* Dark mode */
+.dark {
+  --background: 0 0% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 0 0% 9%;
+  --secondary: 0 0% 14.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 63.9%;
+  --accent: 0 0% 14.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 14.9%;
+  --input: 0 0% 14.9%;
+  --ring: 0 0% 83.1%;
 }
-a:hover {
-  color: #535bf2;
-} */
 
-/* body {
-  margin:0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-/* button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
-
-/* estilos adicionales que se aplicarán solo cuando el usuario tenga configurado un esquema de color claro en su sistema operativo: */
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  .border-border {
+    border-width: 1px;
+    border-color: #000; /* Ajusta según tus necesidades */
   }
-  a:hover {
-    color: #747bff;
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: 'Poppins', sans-serif; /* Fuente principal y respaldo */
+    line-height: 1.5; /* Altura de línea */
+    font-weight: 400; /* Grosor de la fuente */
   }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+}
