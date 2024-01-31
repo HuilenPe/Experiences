@@ -23,6 +23,7 @@ function NavBar() {
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
 
+
     </div>
   )
 }
